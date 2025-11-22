@@ -18,26 +18,28 @@ module.exports = {
   ],
 
   // Coverage thresholds (TDD 계획에 따른 목표)
+  // Note: Thresholds are disabled until we have actual source files and tests
+  // Will be enabled progressively as we add code in each Phase
   coverageThreshold: {
-    global: {
-      statements: 70,
-      branches: 70,
-      functions: 70,
-      lines: 70,
-    },
-    // Phase별 목표 설정
-    'src/core/**/*.js': {
-      statements: 80,
-      branches: 80,
-      functions: 80,
-      lines: 80,
-    },
-    'src/services/**/*.js': {
-      statements: 70,
-      branches: 70,
-      functions: 70,
-      lines: 70,
-    },
+    // global: {
+    //   statements: 70,
+    //   branches: 70,
+    //   functions: 70,
+    //   lines: 70,
+    // },
+    // Phase별 목표 설정 (Phase 2+ 에서 활성화)
+    // 'src/core/**/*.js': {
+    //   statements: 80,
+    //   branches: 80,
+    //   functions: 80,
+    //   lines: 80,
+    // },
+    // 'src/services/**/*.js': {
+    //   statements: 70,
+    //   branches: 70,
+    //   functions: 70,
+    //   lines: 70,
+    // },
   },
 
   // Test match patterns
