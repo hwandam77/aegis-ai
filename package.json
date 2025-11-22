@@ -1,0 +1,34 @@
+{
+  "name": "aegis-ai",
+  "version": "0.1.0",
+  "description": "TDD-based Multi-AI MCP Server - Integrating Codex, Qwen, and Gemini with Test-Driven Development",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose"
+  },
+  "keywords": [
+    "ai",
+    "mcp",
+    "codex",
+    "qwen",
+    "gemini",
+    "tdd",
+    "test-driven-development",
+    "multi-ai",
+    "model-context-protocol"
+  ],
+  "author": "hwandam",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0"
+  }
+}
