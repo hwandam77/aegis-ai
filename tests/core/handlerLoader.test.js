@@ -1,12 +1,7 @@
 // tests/core/handlerLoader.test.js
 
-const fs = require('fs');
 const path = require('path');
 const handlerLoader = require('../../src/core/handlerLoader');
-
-// Mock 파일 시스템
-jest.mock('fs');
-jest.mock('path');
 
 describe('handlerLoader', () => {
   let handlerLoaderInstance;
@@ -29,42 +24,24 @@ describe('handlerLoader', () => {
   });
 
   describe('loadHandlers 성공 케이스', () => {
-    // TODO: 파일 시스템 모킹 개선 필요
-    test.skip('디렉토리에서 핸들러 동적 로드 (성공)', () => {
+    test('디렉토리에서 핸들러 동적 로드 (성공)', () => {
       // Given
-      const dirPath = 'test-handlers';
-      const mockFiles = ['handlerA.js', 'handlerB.js'];
-      fs.readdirSync.mockReturnValue(mockFiles);
-      fs.statSync.mockImplementation((filePath) => {
-        return { isDirectory: () => false };
-      });
-      jest.mock('../../src/test-handlers/handlerA', () => ({
-        default: { name: 'handlerA', execute: jest.fn() }
-      }));
-      jest.mock('../../src/test-handlers/handlerB', () => ({
-        default: { name: 'handlerB', execute: jest.fn() }
-      }));
+      const dirPath = path.join(__dirname, '../fixtures/handlers-valid');
 
       // When
       handlerLoaderInstance.loadHandlers(dirPath);
 
       // Then
       const handlers = handlerLoaderInstance.listHandlers();
-      expect(handlers).toEqual(['handlerA', 'handlerB']);
+      expect(handlers).toContain('handlerA');
+      expect(handlers).toContain('handlerB');
+      expect(handlers).toHaveLength(2);
     });
 
-    // TODO: 파일 시스템 모킹 개선 필요
-    test.skip('JavaScript 파일만 필터링', () => {
+    test('JavaScript 파일만 필터링', () => {
       // Given
-      const dirPath = 'mixed-handlers';
-      const mockFiles = ['handlerC.js', 'config.json', 'README.md'];
-      fs.readdirSync.mockReturnValue(mockFiles);
-      fs.statSync.mockImplementation((filePath) => {
-        return { isDirectory: () => false };
-      });
-      jest.mock('../../src/mixed-handlers/handlerC', () => ({
-        default: { name: 'handlerC', execute: jest.fn() }
-      }));
+      const dirPath = path.join(__dirname, '../fixtures/handlers-mixed');
+      handlerLoaderInstance.clearHandlers(); // 이전 테스트 영향 제거
 
       // When
       handlerLoaderInstance.loadHandlers(dirPath);
@@ -72,14 +49,14 @@ describe('handlerLoader', () => {
       // Then
       const handlers = handlerLoaderInstance.listHandlers();
       expect(handlers).toEqual(['handlerC']);
+      expect(handlers).not.toContain('config');
+      expect(handlers).not.toContain('README');
     });
 
     test('존재하지 않는 디렉토리 (Edge case)', () => {
       // Given
-      const dirPath = 'non-existent-dir';
-      fs.readdirSync.mockImplementation(() => {
-        throw new Error('No such file or directory');
-      });
+      const dirPath = path.join(__dirname, '../fixtures/non-existent-dir');
+      handlerLoaderInstance.clearHandlers();
 
       // When
       handlerLoaderInstance.loadHandlers(dirPath);
@@ -87,6 +64,21 @@ describe('handlerLoader', () => {
       // Then
       const handlers = handlerLoaderInstance.listHandlers();
       expect(handlers).toEqual([]);
+    });
+
+    test('로드된 핸들러가 실제로 실행 가능함', () => {
+      // Given
+      const dirPath = path.join(__dirname, '../fixtures/handlers-valid');
+      handlerLoaderInstance.clearHandlers();
+
+      // When
+      handlerLoaderInstance.loadHandlers(dirPath);
+      const handler = handlerLoaderInstance.getHandler('handlerA');
+
+      // Then
+      expect(handler).toBeDefined();
+      expect(handler.execute).toBeDefined();
+      expect(handler.execute()).toBe('Handler A executed');
     });
   });
 
