@@ -5,6 +5,8 @@
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Test Coverage](https://img.shields.io/badge/coverage-0%25-red)](./coverage)
+[![GitHub](https://img.shields.io/badge/github-hwandam77%2Faegis--ai-blue?logo=github)](https://github.com/hwandam77/aegis-ai)
+[![GitHub Stars](https://img.shields.io/github/stars/hwandam77/aegis-ai?style=social)](https://github.com/hwandam77/aegis-ai/stargazers)
 
 ---
 
