@@ -45,8 +45,10 @@ jobs:
           echo "Lines: $LINES%"
 
           # Check if coverage meets minimum thresholds (currently informational)
-          if (( $(echo "$STATEMENTS < 70" | bc -l) )); then
+          if [ $(echo "$STATEMENTS < 70" | awk '{print ($1 < $2)}') -eq 1 ]; then
             echo "⚠️ Warning: Statement coverage ($STATEMENTS%) is below target (70%)"
+          else
+            echo "✅ Statement coverage meets target!"
           fi
         else
           echo "ℹ️ No tests found yet. Coverage report will be generated once tests are added."
