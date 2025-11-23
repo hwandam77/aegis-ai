@@ -192,10 +192,49 @@ npm run format           # Format code with Prettier (if configured)
 
 ## 📚 Documentation
 
+### Internal Documentation
+
 - **[TDD Overview](./docs/TDD_업그레이드_계획/00_OVERVIEW.md)**: Complete TDD integration plan
-- **[Phase 1: Infrastructure](./docs/TDD_업그레이드_계획/01_PHASE1_INFRASTRUCTURE.md)**: Jest setup guide
-- **[Metrics & KPIs](./docs/TDD_업그레이드_계획/METRICS.md)**: Success measurement
-- **[Checklist](./docs/TDD_업그레이드_계획/CHECKLIST.md)**: Implementation tracking
+- **[TDD Policy](./docs/TDD_POLICY.md)**: TDD standards and policies
+- **[Contributing Guide](./CONTRIBUTING.md)**: How to contribute
+- **[Practical Benefits](./docs/PRACTICAL_BENEFITS.md)**: Real-world value of TDD
+- **[Project Complete](./docs/PROJECT_COMPLETE.md)**: Final achievement report
+- **[Checklist Achievement](./docs/CHECKLIST_ACHIEVEMENT.md)**: Goal tracking
+- **[Skills Proposal](./docs/SKILLS_PROPOSAL.md)**: Claude Code Skills integration
+
+### Phase Documentation
+
+- **[Phase 1: Infrastructure](./docs/TDD_업그레이드_계획/01_PHASE1_INFRASTRUCTURE.md)**: Jest setup
+- **[Phase 2: Core Modules](./docs/TDD_업그레이드_계획/02_PHASE2_CORE_MODULES.md)**: Core development
+- **[Phase 3: Service Layer](./docs/TDD_업그레이드_계획/03_PHASE3_SERVICE_LAYER.md)**: Service testing
+- **[Phase 4: MCP Protocol](./docs/TDD_업그레이드_계획/04_PHASE4_MCP_PROTOCOL.md)**: Protocol testing
+- **[Phase 5: AI Automation](./docs/TDD_업그레이드_계획/05_PHASE5_AI_AUTOMATION.md)**: Automation tools
+- **[Phase 6: Continuous Improvement](./docs/TDD_업그레이드_계획/06_PHASE6_CONTINUOUS_IMPROVEMENT.md)**: Quality culture
+
+---
+
+## 🔗 References
+
+### Claude Code & Skills
+
+- [Claude Code Skills Documentation](https://code.claude.com/docs/en/skills) - Official Skills guide
+- [How to Create Custom Skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills) - Skills creation tutorial
+- [Anthropic Skills Repository](https://github.com/anthropics/skills) - Example skills and patterns
+
+### Testing & TDD
+
+- [Jest Official Documentation](https://jestjs.io/) - Jest testing framework
+- [Test-Driven Development by Example](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530) - Kent Beck's TDD guide
+- [Martin Fowler on TDD](https://martinfowler.com/bliki/TestDrivenDevelopment.html) - TDD best practices
+
+### MCP Protocol
+
+- [Model Context Protocol](https://modelcontextprotocol.io/) - MCP specification
+- [MCP SDK Documentation](https://github.com/modelcontextprotocol/sdk) - Official SDK
+
+### Related Projects
+
+- [Codex-Qwen-Gemini MCP](https://github.com/hwandam77/codex-qwen-gemini-mcp) - Original inspiration project
 
 ---
 
