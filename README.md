@@ -295,11 +295,35 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **Gemini AI**: Creative ideation and BDD specification
-- **Qwen AI**: Technical implementation and code generation
-- **Codex AI**: Code review and optimization
-- **Claude Code**: Project management and orchestration
+### AI Team
+
+- **Gemini AI** (Google): Creative ideation, BDD specification generation (50+ scenarios)
+- **Qwen AI** (Alibaba): Technical implementation, Jest test code generation (80+ tests)
+- **Codex AI** (OpenAI): Code review, optimization suggestions, refactoring guidance
+- **Claude Code** (Anthropic): Project management, orchestration, TDD workflow coordination
+
+### Frameworks & Tools
+
+- **[Jest](https://jestjs.io/)**: Testing framework that made 99%+ coverage possible
+- **[Node.js](https://nodejs.org/)**: Runtime environment
+- **[GitHub Actions](https://github.com/features/actions)**: CI/CD automation
+- **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/)**: AI integration standard
+
+### Inspiration & Learning
+
+- **[Kent Beck](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530)**: Test-Driven Development methodology
+- **[Martin Fowler](https://martinfowler.com/)**: Software design and testing best practices
+- **[Anthropic](https://www.anthropic.com/)**: Claude Code platform and Skills system
+- **[Original MCP Project](https://github.com/hwandam77/codex-qwen-gemini-mcp)**: Initial inspiration for multi-AI integration
+
+### Community
+
+- **Open Source Community**: For Jest, GitHub Actions, and countless testing libraries
+- **TDD Community**: For continuous advocacy of test-first development
+- **MCP Community**: For building the future of AI integration
 
 ---
 
-**Built with ❤️ using Test-Driven Development**
+**Built with ❤️ and TDD**
+**Powered by AI Trinity**
+**Achieved: LEGENDARY Level 👑**
