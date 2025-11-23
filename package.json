@@ -9,6 +9,7 @@
     "test:coverage": "jest --coverage",
     "test:verbose": "jest --verbose",
     "dashboard": "npm run test:coverage --silent && node scripts/dashboard.js",
+    "generate-test": "node scripts/generate-test.js",
     "start": "node src/index.js"
   },
   "keywords": [
